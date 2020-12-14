@@ -1,0 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #FAF3EE;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, header {
+  font-family: 'Playfair Display', serif;
+}
+header {
+  display: flex;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+.logo-container,.navbar {
+  display: flex;
+}
+
+.logo-container{
+  flex: 1;
+}
+nav{
+  flex: 2;
+}
+.navbar {
+  justify-content: space-around;
+  list-style: none;
+}
+.about, .portfolio, .contact {
+  color: #EC7505;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.presentation {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+.introduction {
+  flex: 2;
+}
+.intro-text h1{
+  font-size: 30px;
+  background: linear-gradient(to right, #EC7505, #FAED10);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+  margin: 5px;
+  font-size: 12px;
+  color: #36393B;
+}
+.CTA{
+  padding: 50px 0px 0px 0px;
+}
+.knowmore{
+  border: 2px solid #FAED10;
+  background: transparent;
+  color: #FAED10;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.my-work {
+  background: #FAED10;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: #FAF3EE;
+  margin: 30px 0px 0px 30px;
+}
+
+.cover{
+  flex: 1;
+  height: 60vh;
+}
+.cover img{
+  height: 100%;
+  filter: drop-shadow(0px 8px 5px black);
+  animation: drop 1s ease-in;
+}
+
+@keyframes drop{
+  0%{
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation{
+    flex-direction: column;
+  }
+  .introduction{
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .intro-text h1{
+    font-size: 30px;
+  }
+  .intro-text p{
+    font-size: 18px;
+  }
+  .CTA{
+    padding: 10px 0px 0px 0px;
+  }
+  .cover img{
+    margin-top: 30px;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cover img{
+    height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .my-work{
+    margin: 15px 0px 0px 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .knowmore{
+    width: 100px;
+    height:30px;
+    font-size: 10px;
+  }
+  .about, .portfolio, .contact{
+    font-size: 14px;
+  }
+  .intro-text h1{
+    font-size: 20px;
+  }
+  .intro-text p{
+    font-size: 12px;
+  }
+}
