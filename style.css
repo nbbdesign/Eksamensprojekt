@@ -1,0 +1,353 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #FAF3EE;
+}
+
+body, p {
+  font-family: 'Montserrat', sans-serif;
+}
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, header {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navigationsbar */
+header {
+  display: flex;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+.logo-container,.navbar {
+  display: flex;
+}
+
+.logo-container{
+  flex: 1;
+}
+nav{
+  flex: 2;
+}
+.navbar {
+  justify-content: space-around;
+  list-style: none;
+}
+.about, .portfolio, .contact, .home {
+  color: #EC7505;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Forside */
+.presentation {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+.introduction {
+  flex: 2;
+}
+.intro-text h1{
+  font-size: 30px;
+  color: #EC7505;
+}
+.intro-text p{
+  margin: 5px;
+  font-size: 12px;
+  color: #36393B;
+}
+.CTA{
+  padding: 50px 0px 0px 0px;
+}
+.knowmore{
+  border: 2px solid #EC7505;
+  background: transparent;
+  color: #EC7505;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.my-work {
+  background: #EC7505;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: #FAF3EE;
+  margin: 30px 0px 0px 30px;
+}
+.cover{
+  flex: 1;
+  height: 60vh;
+}
+.cover img{
+  height: 100%;
+  filter: drop-shadow(0px 8px 5px black);
+  animation: drop 1s ease-in;
+}
+
+/* Om mig */
+.about-text{
+  margin: 0px 0px 0px 30px;
+}
+.about-text h3{
+  margin: 15px 0px 0px 0px;
+  color: #EC7505;
+  font-size: 20px;
+}
+.about-text h2{
+  color: #EC7505;
+  font-size: 24px;
+}
+.about-text p{
+  font-size: 12px;
+}
+.SoMe{
+  margin: 10px 0px 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes drop{
+  0%{
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Portfolio */
+.portfolio-main{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.portfolio-main h1{
+  margin: 5% 0 2% 0;
+  text-align: center;
+  font-size: 30px;
+  color: #EC7505;
+}
+.portfolio-main p{
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.gallery{
+  position: relative;
+  height: auto;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2vh;
+  grid-auto-flow: dense;
+}
+.image{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+}
+.image:first-child{
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.image:nth-child(2n+3){
+  grid-row-start: span 2;
+}
+.image:nth-child(4n+5){
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.image:nth-child(6n+7){
+  grid-row-start: span 1;
+}
+.image:nth-child(8n+9){
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+.gallery img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5) grayscale(100);
+  transition: 0.3s ease-in-out;
+}
+.gallery img:hover{
+  filter: brightness(1) grayscale(0);
+}
+
+/* Kontakt */
+.mailmobile{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.mailmobile img{
+  margin-right: 10px;
+}
+.mailmobile p{
+  margin-right: 30px;
+}
+.contact-text h2{
+  font-size: 24px;
+  color: #EC7505;
+}
+.contact-text p{
+  font-size: 14px;
+}
+
+/* CSS for Tablet */
+@media screen and (max-width: 1024px) {
+  /* Forside - Index */
+  .presentation{
+    flex-direction: column;
+  }
+  .introduction{
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .intro-text h1{
+    font-size: 26px;
+  }
+  .intro-text p{
+    font-size: 16px;
+  }
+  .CTA{
+    padding: 10px 0px 0px 0px;
+  }
+  .cover img{
+    margin-top: 30px;
+    height: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+
+/* Om mig */
+.about-text h2{
+  font-size: 20px;
+}
+.about-text p{
+  text-align: left;
+}
+.about-text h3{
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Portfolio */
+.portfolio-main h1{
+  font-size: 26px;
+}
+.portfolio-main p{
+  font-size: 16px;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* Kontakt */
+.contact-text h2{
+  font-size: 20px;
+}
+
+/* CSS for Mobile */
+@media screen and (max-width: 480px) {
+/* Forside - Index */
+  .cover img{
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .my-work{
+    margin: 15px 0px 0px 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .knowmore{
+    width: 100px;
+    height:30px;
+    font-size: 10px;
+  }
+  .about, .portfolio, .contact, .home{
+    font-size: 14px;
+  }
+  .intro-text h1{
+    font-size: 20px;
+  }
+  .intro-text p{
+    font-size: 12px;
+  }
+
+/* Om mig */
+.about-text h2{
+  font-size: 18px;
+}
+.about-text p{
+  font-size: 12px;
+}
+.about-text h3{
+  font-size: 14px;
+}
+/* Portfolio */
+.portfolio-main h1{
+  font-size: 20px;
+}
+.portfolio-main p{
+  font-size: 12px;
+  width: 85%;
+  margin-left: 15px;
+}
+.gallery{
+  display: block;
+}
+.image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 2% 0;
+}
+.gallery img{
+  display: block;
+  filter: brightness(1) grayscale(0);
+}
+
+/* Kontakt */
+.mailmobile p{
+  font-size: 12px;
+  text-align: center;
+  margin-left: 10px;
+}
+.mailmobile{
+  display: block;
+}
+.contact-text h2{
+  font-size: 18px;
+}
+.contact-text p{
+  font-size: 12px;
+}
+
+}
