@@ -1,3 +1,6 @@
+@media screen and (min-width: 1025px) {
+
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -5,7 +8,7 @@
   background-color: #FAF3EE;
 }
 
-body {
+body, p {
   font-family: 'Montserrat', sans-serif;
 }
 button {
@@ -14,6 +17,7 @@ button {
 h1, h2, h3, h4, header {
   font-family: 'Playfair Display', serif;
 }
+
 /* Navigationsbar */
 header {
   display: flex;
@@ -36,7 +40,7 @@ nav{
   justify-content: space-around;
   list-style: none;
 }
-.about, .portfolio, .contact {
+.about, .portfolio, .contact, .home {
   color: #EC7505;
   font-size: 20px;
   text-decoration: none;
@@ -102,6 +106,11 @@ nav{
 }
 .about-text h3{
   margin: 15px 0px 0px 0px;
+  color: #EC7505;
+}
+.about-text h2{
+  color: #EC7505;
+  font-size: 24px;
 }
 .about-text p{
   font-size: 12px;
@@ -123,7 +132,92 @@ nav{
   }
 }
 
+/* Portfolio */
+.portfolio-main{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.portfolio-main h1{
+  margin: 5% 0 2% 0;
+  text-align: center;
+  font-size: 30px;
+  color: #EC7505;
+}
+.portfolio-main p{
+  text-align: center;
+  font-size: 14px;
+}
+.gallery{
+  position: relative;
+  height: auto;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2vh;
+  grid-auto-flow: dense;
+}
+.image{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+}
+.image:first-child{
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.image:nth-child(2n+3){
+  grid-row-start: span 2;
+}
+.image:nth-child(4n+5){
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.image:nth-child(6n+7){
+  grid-row-start: span 1;
+}
+.image:nth-child(8n+9){
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+.gallery img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5) grayscale(100);
+  transition: 0.3s ease-in-out;
+}
+.gallery img:hover{
+  filter: brightness(1) grayscale(0);
+}
+
+/* Kontakt */
+.mailmobile{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.mailmobile img{
+  margin-right: 10px;
+}
+.mailmobile p{
+  margin-right: 30px;
+}
+.contact-text h2{
+  font-size: 24px;
+  color: #EC7505;
+}
+.contact-text p{
+  font-size: 14px;
+}
+
+/* CSS for Tablet */
 @media screen and (max-width: 1024px) {
+  /* Forside - Index */
   .presentation{
     flex-direction: column;
   }
@@ -132,10 +226,10 @@ nav{
     text-align: center;
   }
   .intro-text h1{
-    font-size: 30px;
+    font-size: 26px;
   }
   .intro-text p{
-    font-size: 18px;
+    font-size: 16px;
   }
   .CTA{
     padding: 10px 0px 0px 0px;
@@ -150,7 +244,23 @@ nav{
   }
 }
 
-@media screen and (max-width: 320px) {
+/* Om mig */
+
+/* Portfolio */
+.portfolio-main h1{
+  font-size: 26px;
+}
+.portfolio-main p{
+  font-size: 16px;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* CSS for Mobile */
+@media screen and (max-width: 480px) {
+/* Forside - Index */
   .cover img{
     height: 60%;
     display: block;
@@ -178,4 +288,26 @@ nav{
   .intro-text p{
     font-size: 12px;
   }
+
+/* Om mig */
+
+/* Portfolio */
+.portfolio-main h1{
+  font-size: 20px;
+}
+.portfolio-main p{
+  font-size: 12px;
+}
+.gallery{
+  display: block;
+}
+.image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 2% 0;
+}
+.gallery img{
+  display: block;
+  filter: brightness(1) grayscale(0);
 }
